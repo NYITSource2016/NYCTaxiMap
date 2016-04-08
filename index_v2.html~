@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>New York Taxi Information</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+  </head>
+  <body>
+    <div id="map" style="width:75vw; height:97vh; float:left"></div>
+    <div style="width:20vw; height:97vh; margin-left:1vw; float:left; line-height:150%">
+      <form oninput="refresh()">
+	<input type="radio" name="dataType" onchange="refresh()" value="pickup_count" id="t0" checked="checked"/>
+	<label for="t0">Pick Up Count</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="pickup_passenger_count" id="t1"/>
+	<label for="t1">Pick Up Passenger Count</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="pickup_total_distance" id="t2"/>
+	<label for="t2">Pick Up Total Distance</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="pickup_total_fee" id="t3"/>
+	<label for="t3">Pick Up Total Fee</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="dropoff_count" id="t4"/>
+	<label for="t4">Drop Off Count</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="dropoff_passenger_count" id="t5"/>
+	<label for="t5">Drop Off Passenger Count</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="dropoff_total_distance" id="t6"/>
+	<label for="t6">Drop Off Total Distance</label>
+	<br />
+	<input type="radio" name="dataType" onchange="refresh()" value="dropoff_total_fee" id="t7"/>
+	<label for="t7">Drop Off Total Fee</label>
+	<br /><br />
+	Day in a Week:
+	<select name="day" id="selectDay">
+	  <option value="0">Sunday</option>
+	  <option value="1">Monday</option>
+	  <option value="2">Tuesday</option>
+	  <option value="3">Wednesday</option>
+	  <option value="4">Thursday</option>
+	  <option value="5">Friday</option>
+	  <option value="6">Saturday</option>
+	</select>
+	<br />
+	Time in a Day:
+	<select name="time" id="selectTime">
+	  <option value="0">00:00 - 00:30</option>	  
+	  <option value="1">00:30 - 01:00</option>
+	  <option value="2">01:00 - 01:30</option>
+	  <option value="3">01:30 - 02:00</option>
+	  <option value="4">02:00 - 02:30</option>
+	  <option value="5">02:30 - 03:00</option>
+	  <option value="6">03:00 - 03:30</option>
+	  <option value="7">03:30 - 04:00</option>
+	  <option value="8">04:00 - 04:30</option>
+	  <option value="9">04:30 - 05:00</option>
+	  <option value="10">05:00 - 05:30</option>
+	  <option value="11">05:30 - 06:00</option>
+	  <option value="12">06:00 - 06:30</option>
+	  <option value="13">06:30 - 07:00</option>
+	  <option value="14">07:00 - 07:30</option>
+	  <option value="15">07:30 - 08:00</option>
+	  <option value="16">08:00 - 08:30</option>
+	  <option value="17">08:30 - 09:00</option>
+	  <option value="18">09:00 - 09:30</option>
+	  <option value="19">09:30 - 10:00</option>
+	  <option value="20">10:00 - 10:30</option>
+	  <option value="21">10:30 - 11:00</option>
+	  <option value="22">11:00 - 11:30</option>
+	  <option value="23">11:30 - 12:00</option>
+	  <option value="24">12:00 - 12:30</option>
+	  <option value="25">12:30 - 13:00</option>
+	  <option value="26">13:00 - 13:30</option>
+	  <option value="27">13:30 - 14:00</option>
+	  <option value="28">14:00 - 14:30</option>
+	  <option value="29">14:30 - 15:00</option>
+	  <option value="30">15:00 - 15:30</option>
+	  <option value="31">15:30 - 16:00</option>
+	  <option value="32">16:00 - 16:30</option>
+	  <option value="33">16:30 - 17:00</option>
+	  <option value="34">17:00 - 17:30</option>
+	  <option value="35">17:30 - 18:00</option>
+	  <option value="36">18:00 - 18:30</option>
+	  <option value="37">18:30 - 19:00</option>
+	  <option value="38">19:00 - 19:30</option>
+	  <option value="39">19:30 - 20:00</option>
+	  <option value="40">20:00 - 20:30</option>
+	  <option value="41">20:30 - 21:00</option>
+	  <option value="42">21:00 - 21:30</option>
+	  <option value="43">21:30 - 22:00</option>
+	  <option value="44">22:00 - 22:30</option>
+	  <option value="45">22:30 - 23:00</option>
+	  <option value="46">23:00 - 23:30</option>
+	  <option value="47">23:30 - 24:00</option>
+	</select>
+      </form>
+    </div>
+    
+    <script type="text/javascript" src="leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="webgl-heatmap/js/webgl-heatmap.js"></script>
+    <script type="text/javascript" src="webgl-heatmap/js/webgl-heatmap-leaflet.js"></script>
+    <script type="text/javascript" src="drawmap_v2.js"></script>
+  </body>
+</html>

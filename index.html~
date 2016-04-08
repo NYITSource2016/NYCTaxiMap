@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>New York Taxi Information</title>
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+  </head>
+  <body>
+    <div id="mapid" style="width: 1200px; height: 600px" align="center"></div>
+
+    
+    <script type="text/javascript" src="leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="drawmap.js"></script>
+  </body>
+</html>
